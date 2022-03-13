@@ -15,7 +15,10 @@ class EditPage extends React.Component {
     console.log(this.state.task);
     return (
       <div className="EditPage flex col">
-        <div className="closeEdit" onClick={() => this.handleToggleEdit()} />
+        <div
+          className="closeEdit btn"
+          onClick={() => this.handleToggleEdit()}
+        />
         <textarea className="textarea flex" id="textareaTitle">
           {this.state.task.title}
         </textarea>
