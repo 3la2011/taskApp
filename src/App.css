@@ -36,6 +36,26 @@
   border-radius: 0.4em;
 }
 
+.closeEdit {
+  width: 1em;
+  height: 1em;
+  background-color: #fff;
+  border: 1px black solid;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(70%, -70%);
+}
+
+.closeEdit::before {
+  content: "x";
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: red;
+  transform: translate(30%, -20%);
+}
+
 .hideEditPage {
   display: none;
 }
