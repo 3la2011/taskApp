@@ -13,6 +13,10 @@
   width: 100vw;
   height: 100vh;
 }
+/* 
+header {
+  background-color: black;
+} */
 
 .TaskTitle,
 #addTaskBtn {
@@ -22,6 +26,13 @@
   border-radius: 0.4em;
   border: none;
   background-color: #ddd;
+  transition: 1s;
+}
+
+.TaskTitle:hover,
+#addTaskBtn:hover,
+.btn:hover {
+  border: 1px solid #999;
 }
 
 .EditPage {
@@ -41,6 +52,7 @@
   height: 1em;
   background-color: #fff;
   border: 1px black solid;
+  border-radius: 0.4em;
   position: absolute;
   top: 0;
   right: 0;
@@ -72,6 +84,7 @@
   height: 6vh;
   margin: 1em;
 }
+
 #textareaDetail {
   width: 30vw;
   height: 40vh;
@@ -82,9 +95,19 @@
   width: 30vw;
   justify-content: space-evenly;
 }
+
 .editBtns button {
   width: 4em;
   height: 2em;
   margin: 0.4em;
   border-radius: 0.4em;
+  color: #fff;
+}
+
+#save {
+  background-color: green;
+}
+
+#delete {
+  background-color: red;
 }

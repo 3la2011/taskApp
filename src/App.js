@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import Tasks from "./components/Tasks";
 import EditPage from "./components/EditPage";
+import Header from "./components/Header";
 
 class App extends React.Component {
   constructor(props) {
@@ -88,6 +89,7 @@ class App extends React.Component {
 
     return (
       <div className="App flex col">
+        <Header />
         <Tasks
           tasks={this.state.tasks}
           key={this.state.tasks.id}
