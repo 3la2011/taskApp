@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .col {
   flex-direction: column;
 }
@@ -13,10 +14,6 @@
   width: 100vw;
   height: 100vh;
 }
-/* 
-header {
-  background-color: black;
-} */
 
 .TaskTitle,
 #addTaskBtn {
@@ -30,9 +27,13 @@ header {
 }
 
 .TaskTitle:hover,
+#addTaskBtn:hover {
+  border: 2px solid #000;
+}
+
+.TaskTitle:hover,
 #addTaskBtn:hover,
 .btn:hover {
-  border: 2px solid #000;
   cursor: pointer;
 }
 
@@ -43,8 +44,8 @@ header {
   right: 10vw;
   top: 10vh;
   z-index: 10;
-  background-color: blanchedalmond;
-  border: 10px solid black;
+  background-color: rgb(215, 241, 180);
+  border: 1px solid black;
   border-radius: 0.4em;
 }
 
@@ -52,21 +53,20 @@ header {
   width: 1em;
   height: 1em;
   background-color: #fff;
+  color: red;
+  font-weight: bold;
+  font-size: 1.2em;
   border: 1px black solid;
-  border-radius: 0.4em;
+  border-radius: 0 0.3em;
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(70%, -70%);
+  transition: 0.4s;
 }
 
-.closeEdit::before {
-  content: "x";
-  position: absolute;
-  font-weight: bold;
-  font-size: 1.2em;
-  color: red;
-  transform: translate(30%, -20%);
+.closeEdit:hover {
+  color: #fff;
+  background-color: red;
 }
 
 .hideEditPage {
@@ -74,6 +74,7 @@ header {
 }
 
 .textarea {
+  width: 60vw;
   resize: none;
   padding: 0.4em 0 0;
   text-align: center;
@@ -81,13 +82,11 @@ header {
 }
 
 #textareaTitle {
-  width: 30vw;
   height: 6vh;
   margin: 1em;
 }
 
 #textareaDetail {
-  width: 30vw;
   height: 40vh;
   justify-self: flex-end;
 }
@@ -98,17 +97,32 @@ header {
 }
 
 .editBtns button {
-  width: 4em;
-  height: 2em;
+  width: 3.4em;
+  height: 1.6em;
   margin: 0.4em;
   border-radius: 0.4em;
   color: #fff;
+  transition: 0.4s;
+  opacity: 0.6;
+}
+
+.editBtns button:hover {
+  opacity: 1;
 }
 
 #save {
-  background-color: green;
+  background-color: rgba(26, 173, 26, 0.664);
 }
 
 #delete {
-  background-color: red;
+  background-color: rgba(182, 25, 25, 0.637);
+}
+
+@media screen and (max-width: 426px) {
+  .textarea {
+    width: 70vw;
+  }
+  .editBtns {
+    width: 70vw;
+  }
 }
